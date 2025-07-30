@@ -34,6 +34,8 @@ defmodule Vutuv.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:usage_rules, "~> 0.1", only: [:dev]},
+      {:claude, "~> 0.2", only: [:dev], runtime: false},
       {:tidewave, "~> 0.2", only: [:dev]},
       {:phoenix, "~> 1.8.0-rc.4", override: true},
       {:phoenix_ecto, "~> 4.5"},
