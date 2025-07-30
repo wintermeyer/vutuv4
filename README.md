@@ -11,6 +11,13 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+## Documentation
+
+### Internationalization (I18n)
+
+* [I18n Approach](docs/i18n_approach.md) - Comprehensive guide to our internationalization strategy using Gettext
+* [I18n Quick Reference](docs/i18n_quick_reference.md) - Quick reference for common I18n tasks
+
 ## Learn more about Phoenix Framework
 
 * Official website: https://www.phoenixframework.org/
