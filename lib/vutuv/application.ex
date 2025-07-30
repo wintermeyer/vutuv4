@@ -10,6 +10,7 @@ defmodule Vutuv.Application do
     children = [
       VutuvWeb.Telemetry,
       Vutuv.Repo,
+      Vutuv.Legacy.Repo,
       {DNSCluster, query: Application.get_env(:vutuv, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Vutuv.PubSub},
       # Start a worker by calling: Vutuv.Worker.start_link(arg)

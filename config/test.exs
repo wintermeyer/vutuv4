@@ -13,6 +13,15 @@ config :vutuv, Vutuv.Repo,
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: System.schedulers_online() * 2
 
+# Configure the legacy database connection for tests
+# Note: Legacy repo should NOT use sandbox mode as it's read-only
+config :vutuv, Vutuv.Legacy.Repo,
+  username: "vutuv4",
+  password: "vutuv4",
+  hostname: "localhost",
+  database: "vutuv1_dev",
+  pool_size: 5
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :vutuv, VutuvWeb.Endpoint,
