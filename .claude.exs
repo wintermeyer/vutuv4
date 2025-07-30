@@ -37,6 +37,9 @@
   #   {:tidewave, [port: 4000, enabled?: false]}
   # ],
 
+  # Git commit configuration
+  includeCoAuthoredBy: false,
+
   # Subagents provide specialized expertise with their own context
   subagents: [
     %{
