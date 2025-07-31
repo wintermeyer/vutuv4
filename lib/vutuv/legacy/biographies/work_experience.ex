@@ -34,7 +34,7 @@ defmodule Vutuv.Legacy.Biographies.WorkExperience do
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
-    timestamps(type: :naive_datetime)
+    timestamps()
   end
 
   def changeset(work_experience, attrs) do

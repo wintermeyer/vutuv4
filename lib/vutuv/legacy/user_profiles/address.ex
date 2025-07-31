@@ -36,7 +36,7 @@ defmodule Vutuv.Legacy.UserProfiles.Address do
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
-    timestamps(type: :naive_datetime)
+    timestamps()
   end
 
   def changeset(address, attrs) do

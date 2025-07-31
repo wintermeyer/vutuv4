@@ -34,7 +34,7 @@ defmodule Vutuv.Legacy.Publications.Post do
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
     has_many :post_tags, Vutuv.Legacy.Tags.PostTag
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(post, attrs) do

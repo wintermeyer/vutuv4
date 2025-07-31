@@ -2,15 +2,11 @@
 
 This document confirms that all Ecto schemas from Vutuv3 have been mapped to the legacy module.
 
-## Complete Schema List (15 schemas)
+## Complete Schema List (14 schemas)
 
 ### ✅ User and Profile Related (2 schemas)
 - [x] `Vutuv.Legacy.UserProfiles.User` - maps to `users` table
 - [x] `Vutuv.Legacy.UserProfiles.Address` - maps to `addresses` table
-
-### ✅ Authentication and Sessions (2 schemas)
-- [x] `Vutuv.Legacy.Accounts.UserCredential` - maps to `user_credentials` table
-- [x] `Vutuv.Legacy.Sessions.Session` - maps to `sessions` table
 
 ### ✅ Contact Information (2 schemas)
 - [x] `Vutuv.Legacy.Devices.EmailAddress` - maps to `email_addresses` table
@@ -42,6 +38,6 @@ These modules from Vutuv3 are NOT Ecto schemas and were not included:
 
 ## Summary
 
-**Total Ecto Schemas**: 15 (all migrated)
-**Database Tables**: 15
+**Total Ecto Schemas**: 14 (all migrated)
+**Database Tables**: 14
 **Status**: ✅ Complete - All Ecto schemas from Vutuv3 have been successfully mapped to the legacy module.

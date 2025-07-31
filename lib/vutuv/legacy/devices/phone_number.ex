@@ -25,7 +25,7 @@ defmodule Vutuv.Legacy.Devices.PhoneNumber do
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(phone_number, attrs) do

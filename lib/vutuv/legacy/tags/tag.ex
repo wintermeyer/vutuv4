@@ -34,7 +34,7 @@ defmodule Vutuv.Legacy.Tags.Tag do
     has_many :post_tags, Vutuv.Legacy.Tags.PostTag
     has_many :user_tags, Vutuv.Legacy.Tags.UserTag
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(tag, attrs) do

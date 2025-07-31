@@ -17,7 +17,6 @@ config :vutuv, Vutuv.Legacy.Repo,
 
 The legacy schemas mirror the original Vutuv3 structure:
 
-- `accounts/` - User authentication (UserCredential)
 - `user_profiles/` - Core user data (User, Address)
 - `devices/` - Contact information (EmailAddress, PhoneNumber)
 - `sessions/` - User sessions
@@ -62,8 +61,9 @@ user = Vutuv.Legacy.UserProfiles.User
 
 # ✅ Complex queries are supported:
 active_users = Vutuv.Legacy.UserProfiles.User
-|> join(:inner, [u], uc in Vutuv.Legacy.Accounts.UserCredential, on: uc.user_id == u.id)
-|> where([u, uc], uc.confirmed == true)
+|> join(:inner, [u], e in Vutuv.Legacy.Devices.EmailAddress, on: e.user_id == u.id)
+|> where([u, e], e.verified == true)
+|> distinct(true)
 |> Vutuv.Legacy.Repo.all()
 
 # ✅ Find user by email address (use parentheses in IEx for multi-line):

@@ -24,7 +24,7 @@ defmodule Vutuv.Legacy.Tags.PostTag do
     belongs_to :post, Vutuv.Legacy.Publications.Post
     belongs_to :tag, Vutuv.Legacy.Tags.Tag
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(post_tag, attrs) do

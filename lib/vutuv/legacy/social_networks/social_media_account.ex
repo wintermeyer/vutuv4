@@ -34,7 +34,7 @@ defmodule Vutuv.Legacy.SocialNetworks.SocialMediaAccount do
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
-    timestamps(type: :naive_datetime)
+    timestamps()
   end
 
   @providers [

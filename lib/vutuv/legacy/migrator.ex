@@ -25,7 +25,6 @@ defmodule Vutuv.Legacy.Migrator do
       :email_notifications,
       :phone_numbers,
       :posts,
-      :sessions,
       :social_media_accounts,
       :user_tags,
       :work_experiences,

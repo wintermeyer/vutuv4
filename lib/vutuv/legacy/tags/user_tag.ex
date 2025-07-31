@@ -25,7 +25,7 @@ defmodule Vutuv.Legacy.Tags.UserTag do
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
     has_many :user_tag_endorsements, Vutuv.Legacy.Tags.UserTagEndorsement
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(user_tag, attrs) do

@@ -64,15 +64,13 @@ defmodule Vutuv.Legacy.UserProfiles.User do
 
     has_many :phone_numbers, Vutuv.Legacy.Devices.PhoneNumber
     has_many :posts, Vutuv.Legacy.Publications.Post
-    has_many :sessions, Vutuv.Legacy.Sessions.Session
     has_many :social_media_accounts, Vutuv.Legacy.SocialNetworks.SocialMediaAccount
     has_many :user_tags, Vutuv.Legacy.Tags.UserTag
     has_many :work_experiences, Vutuv.Legacy.Biographies.WorkExperience
-    has_one :user_credential, Vutuv.Legacy.Accounts.UserCredential
     has_many :followees, Vutuv.Legacy.UserConnections.UserConnection, foreign_key: :follower_id
     has_many :followers, Vutuv.Legacy.UserConnections.UserConnection, foreign_key: :followee_id
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(user, attrs) do

@@ -30,7 +30,7 @@ defmodule Vutuv.Legacy.Notifications.EmailNotification do
 
     belongs_to :owner, Vutuv.Legacy.UserProfiles.User
 
-    timestamps(type: :naive_datetime)
+    timestamps()
   end
 
   def changeset(email_notification, attrs) do

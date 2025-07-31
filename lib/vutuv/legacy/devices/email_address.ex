@@ -27,7 +27,7 @@ defmodule Vutuv.Legacy.Devices.EmailAddress do
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(email_address, attrs) do

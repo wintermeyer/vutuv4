@@ -29,7 +29,7 @@ defmodule Vutuv.Legacy.UserConnections.UserConnection do
     belongs_to :followee, Vutuv.Legacy.UserProfiles.User
     belongs_to :follower, Vutuv.Legacy.UserProfiles.User
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   def changeset(user_connection, attrs) do
