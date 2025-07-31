@@ -6,7 +6,7 @@ defmodule Vutuv.Legacy.Biographies.WorkExperience do
   similar to LinkedIn work experience entries.
 
   ## Fields
-  - `title` - Job title/position (required)
+  - `job_title` - Job title/position (required)
   - `organization` - Company/organization name (required)
   - `description` - Role description and responsibilities
   - `start_date` - Employment start date
@@ -30,7 +30,7 @@ defmodule Vutuv.Legacy.Biographies.WorkExperience do
     field :organization, :string
     field :slug, :string
     field :start_date, :date
-    field :title, :string
+    field :job_title, :string
 
     belongs_to :user, Vutuv.Legacy.UserProfiles.User
 
@@ -39,7 +39,7 @@ defmodule Vutuv.Legacy.Biographies.WorkExperience do
 
   def changeset(work_experience, attrs) do
     work_experience
-    |> cast(attrs, [:description, :end_date, :organization, :slug, :start_date, :title, :user_id])
-    |> validate_required([:organization, :title, :user_id])
+    |> cast(attrs, [:description, :end_date, :organization, :slug, :start_date, :job_title, :user_id])
+    |> validate_required([:organization, :job_title, :user_id])
   end
 end

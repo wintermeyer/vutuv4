@@ -13,6 +13,13 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Documentation
 
+### Data Model
+
+* [Data Model Developer Guide](docs/data_model_developer_guide.md) - Comprehensive guide to the Vutuv4 data model
+* [Data Model Design](docs/data_model_design.md) - Detailed schema definitions and design decisions  
+* [Entity Relationship Diagram](docs/data_model_erd.md) - Visual representation of the data model
+* [Migration Guide](docs/migration_guide.md) - Step-by-step guide for migrating from Vutuv3
+
 ### Internationalization (I18n)
 
 * [I18n Approach](docs/i18n_approach.md) - Comprehensive guide to our internationalization strategy using Gettext
